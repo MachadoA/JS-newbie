@@ -1,0 +1,24 @@
+.icon-thanks{
+    padding: 15px 0 25px 0;
+    display: block;
+    margin: auto;
+}
+
+.answer{
+    text-align: center;
+    width: 102%;
+    padding-bottom: 20px;
+}
+
+#result{
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    border-radius: 20px;
+    padding: 4px 15px;
+    display: inline-block;
+}
+
+h2{
+    padding: 20px 0 10px 0;
+}
+
