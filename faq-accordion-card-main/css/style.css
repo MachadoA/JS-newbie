@@ -95,6 +95,7 @@ a{ font-weight: bold; color: inherit;}
 .arrow{ 
     width: 10px;
     height: 7px;
+    cursor: pointer;
  }
 .question{
     display: flex;
@@ -102,6 +103,7 @@ a{ font-weight: bold; color: inherit;}
     align-items: baseline;
     padding: 10px 0;
     width: 250px;
+    cursor: pointer;
 }
 .answer{
     display: none;
