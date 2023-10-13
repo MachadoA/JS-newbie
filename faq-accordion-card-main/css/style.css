@@ -175,8 +175,10 @@ a{ font-weight: bold; color: inherit;}
     width: 360px;
     padding: 14px 0;
 }
-
-
+.line{
+    margin: 5px;
+    width: 370px;
+}
 }
 
 
