@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-
 *{
     padding: 0;
     margin: 0;
@@ -15,46 +14,71 @@
     --dividers: hsl(240, 5%, 91%);
     --soft-violet: hsl(273, 75%, 66%);
     --soft-blue: hsl(240, 73%, 65%);
+    --paragraph:hsl(240, 6%, 50%);
 }
 
 body{
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
-    line-height: 2;
+    /* line-height: 1.5; */
     background-image: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     color: var(--very-dark-blue);
     position: relative;
 }
-
+h1{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 12px;
+}
 .container{
     background-color: #fff;
     border: 2px solid #fff;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.24) 3px 4px 0px;
-    width: 85%;
-    max-height: 600px;
-    height: 90%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 8px 50px 60px;
+    width: 290px;
+    height: 495px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     align-items: center;
-    gap: 20px;
-
-    background-image: url(/images/bg-pattern-desktop.svg);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: -114% 82%;
+    margin: auto;
+    margin-top: 15vh;
+    padding: 20px;
+    padding-bottom: 40px;
 }
-
-h1{font-size: 22px;}
-
+.image-box,
+.image-main{
+    display: none;
+}
+.illustration-mobile,
+.base-mobile{
+    display: inline-block;
+    position: absolute;
+}
+.illustration-mobile{
+    top: -115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+}
+.base-mobile{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+}
+.main-text{
+    width: 250px;
+    padding-bottom: 20px;
+}
+h1{
+    font-size: 30px;
+    padding-bottom: 5px;
+    width: 250px;
+}
 h2{
-    font-size: 14px;
+    font-size: 12px;
     color: var(--very-dark-blue);
     font-weight: normal;
 }
@@ -62,183 +86,108 @@ h2:hover{
     color: hsl(14, 88%, 65%);
     cursor: pointer;
 }
-
 a{ font-weight: bold; color: inherit;}
-
 .line{
     border: 1px solid var(--dividers);
-    margin: 5px 0;
+    margin: 6px;
+    width: 250px;
 }
-
 .arrow{ 
     width: 10px;
     height: 7px;
  }
-
-.main-image{
-    width: 40vw;
-    margin: auto;
-}
-.main-text{
-    width: 35vw;
-    margin: auto;
-}
-
 .question{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 10px 0;
+    width: 250px;
 }
-
 .answer{
     display: none;
+    padding-bottom: 10px;
+    width: 250px;
+    color: var(--paragraph);
+    line-height: 1.5;
 }
-
-.image-main{
-    max-width: 100%;
-    width:500px;
-    position:absolute;
-    top: 40px;
-    left: -75px;
-}
-
-.image-box{
-    position: absolute;
-    top: 34%;
-    left: -95px;
-    z-index: 1000;
-
-}
-
-.illustration-mobile,
-.base-mobile{
-    display: none;
-    max-width: 380px;
-    width:100%
-
-}
-
-.attribution { 
+.attribution{
     font-size: 11px; 
     position: fixed; 
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     color: #eee9e9; 
-    }
-.attribution a { color: hsl(227, 13%, 72%); }
-
-@media (min-width: 769px) and (max-width: 1060px){
-    .container{
-        background-size: 85%;
-        background-position: -277% 50%;
-    }
-    .image-main{
-        width:400px;
-        top: 150px;
-        left: -79px;
-    }
-    .image-box{
-        top: 49%;
-        left: -80px;
-        width: 150px;
-    }
+    bottom: 10px
 }
 
-@media (min-width:510px) and (max-width:768px){
-    h1{
-        text-align: center;
-        padding-top: 100px;
-    }
-    .container{
-        margin-top: 200px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 25px 0;
-        position: relative;
-        background-image: none;
-    }
-    .image-box,
-    .image-main{
-        display: none;
-    }
-    .illustration-mobile,
-    .base-mobile{
-        display: inline-block;
-        position: absolute;
-    }
-    .illustration-mobile{
-        top: -176px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .base-mobile{
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .main-text{
-        width: 90%;
-    }
+@media (min-width: 950px) {
+.illustration-mobile,
+.base-mobile{
+    display: none;
+}
+.image-box,
+.image-main{
+    display: block;
+}
+.image-main{
+    width: 450px;
+    position: absolute;
+    top: 43px;
+    /* left: 30px; */
+    left: -75px;
+}
+.image-box{
+    position: absolute;
+    top: 162px;
+    /* left: 8px; */
+    left: -102px;
+
+    z-index: 100;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 930px;
+    height: 478px;
+    background-image: url("/faq-accordion-card-main/images/bg-pattern-desktop.svg");
+    background-size: 830px;
+    background-repeat: no-repeat;
+    background-position: -435px -246px;
+    padding-bottom: 0;
+    position: relative;
+}
+.main-text{
+    margin: auto;
+    width: 360px;
+    height: 420px;
+    padding: 0;
+    padding-top: 45px;
+}
+.main-text h1{
+    text-align: left;
+    padding-bottom: 15px;
+}
+.question{
+    width: 360px;
+    padding: 14px 0;
 }
 
-@media(max-width:509px){
-    body{
-        height: 850px;
-    }
-    h1{
-        text-align: center;
-    }
-    .container{
-        margin: 150px 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        position: relative;
-        background-image: none;
-        max-height: 800px;
-    }
-    .image-box,
-    .image-main{
-        display: none;
-    }
-    .illustration-mobile,
-    .base-mobile{
-        display: inline-block;
-        position: absolute;
-    }
-    .illustration-mobile{
-        top: -130px;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 280px;
-    }
-    .base-mobile{
-        top: -15px;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 280px;
-    }
-    .main-text{
-        width: 90%;
-        margin: 100px 0;
-    }
-    .attribution{
-        bottom: -10px
-    }
+
 }
+
 
 /* JS */
 .arrow-active{
-    transform: rotate(180deg);
-    width: 10px;
-    height: 7px;
+transform: rotate(180deg);
+width: 10px;
+height: 7px;
 }
 .answer-active{
-    display: block;
+display: block;
 }
 .active-h2{
-    font-weight: bold;
+font-weight: bold;
 }
+
