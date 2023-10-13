@@ -20,7 +20,6 @@
 body{
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
-    /* line-height: 1.5; */
     background-image: linear-gradient(to bottom, var(--soft-violet), var(--soft-blue));
     background-repeat: no-repeat;
     min-height: 100vh;
