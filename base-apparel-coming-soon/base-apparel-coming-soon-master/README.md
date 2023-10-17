@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-(./images/newbie.png)
+url(./images/newbie.png)
 
 
 ### Links
