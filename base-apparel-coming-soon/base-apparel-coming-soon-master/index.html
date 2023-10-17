@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <section class="container">
+        <article class="main-img">
+            <picture>
+                <source srcset="images/hero-desktop.jpg" media="(min-width: 1200px)" />
+                <img class="img-mobile" src="images/hero-mobile.jpg"  alt="hero">
+            </picture>
+        </article>
+        <article class="text">
+            <img  class="logo-img" src="images/logo.svg" alt="logo Base Apparel">
+
+            <h1 class="title-text">We're</h1>
+            <h1>coming soon</h1>
+            <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+            <form name="contactForm" id="form">
+                <input id="input-email" type="email" name="email" placeholder="Email Address">
+                <img class="error" src="images/icon-error.svg" alt="icon error">
+                <button type="button" class="arrow-send">
+                    <img src="images/icon-arrow.svg" alt="icon send">
+                </button>
+            </form>
+            <p class="msg-show-up">Please provide a valid email</p>
+            <p class="email-valid-show-up"> Welcome, your email has been validated!</p>
+
+        </article>
+
+    </section>
+    <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/MachadoA">Ana Amaral</a>.
+        </p>
+      </footer>
+</body>
+</html>
