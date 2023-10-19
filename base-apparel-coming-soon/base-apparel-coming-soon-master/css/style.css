@@ -157,6 +157,7 @@ input[type="email"]:not(:focus) {
     height: 26px;
     margin-left: -1px;
     top: 8vh;
+    z-index: -100;
 }
 .title-text{
     padding-top: 70px;
