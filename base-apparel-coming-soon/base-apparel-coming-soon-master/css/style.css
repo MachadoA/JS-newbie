@@ -23,15 +23,16 @@ body {
 .container{
     margin:4vh auto;
     width: 375px;
-    height: 85vh;
+    height: 90vh;
     background-image: var(--gradient-one);
+    position: relative;
 }
 .logo-img{
     width: 108px;
     height: 20px;
     margin-left: -145PX;
-    position: fixed;
-    top: 3vh;
+    position: absolute;
+    top: -1vh;
 }
 .main-img{
     padding: 4vh 0 7vh 0;
@@ -39,6 +40,9 @@ body {
 article.main-img img {
     max-height: 100%; 
 }
+/* article.main-img .img-mobile {
+    width: 370px; 
+} */
 
 .text{
     text-align: center;
@@ -53,7 +57,7 @@ h1{
     color: var(--main-color);
     font-weight: 300;
 }
-p{
+.textParagraph{
     color: var(--main-color);
     font-weight: 400;
     line-height: 1.3;
@@ -127,27 +131,32 @@ input[type="email"]:not(:focus) {
 
 @media  (min-width: 1200px) {
 .container{
-    margin: auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: row-reverse;
-    width: 1200px;
-    height: calc(100vh - 50px);
+    width: 1150px;
+    height: 560px;
     background-image: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
-    background-size: 600px 830px;
+    background-size: 721px 562px;
 }
 
 .main-img picture{
-    height: calc(100vh - 50px);
+    height: 549px;
+    width: 415pxpx;
 }
 .text{
     padding: 82px;
-    padding-top: 16vh;
+    padding-top: 70px;
     text-align: left;
-    width: 614px;
+    width: 665px;
+    height: inherit;
     margin: auto;
+}
+.textParagraph{
+    padding: 12px 0 24px 0;
+    font-size: 18px;
 }
 .main-img{
     padding: 0;
@@ -157,19 +166,21 @@ input[type="email"]:not(:focus) {
     height: 26px;
     margin-left: -1px;
     top: 8vh;
-    z-index: -100;
 }
 .title-text{
     padding-top: 70px;
 }
 h1{
-    font-size: 72px;
+    font-size: 62px;
+}
+input[type="email"] {
+    width: 469px;
 }
 .error{
-    right: 150px;
+    right: 110px;
 }
 .arrow-send{
-    right: 50px;
+    right: 12px;
     width: 92px;
 }
 .img-mobile{
