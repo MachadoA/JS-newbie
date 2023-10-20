@@ -41,7 +41,15 @@ submit.addEventListener('click', (e) => {
     });
     
     if (valid) {
-        alert('Registration successful!');
+        // alert('Registration successful!');
+        function openModal() {
+            var modal = document.querySelector(".modal");
+            modal.style.display = "block";
+            setTimeout(function() {
+                modal.style.display = "none"; // Fecha o modal após 2 segundos
+            }, 3000);
+        }
+
         inputs.forEach(customInput => {
             let input = customInput.querySelector('input');
             if (input) {
@@ -50,6 +58,7 @@ submit.addEventListener('click', (e) => {
         });
     }
 
+    openModal();
 })
 
 
