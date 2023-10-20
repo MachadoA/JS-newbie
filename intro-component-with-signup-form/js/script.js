@@ -13,6 +13,12 @@ submit.addEventListener('click', (e) => {
     inputs.forEach(customInput => {
         let input = customInput.querySelector('input'); 
         if (input) {
+            input.addEventListener('input', () => {
+                customInput.querySelector('.icon-error').style.display = 'none';
+                customInput.querySelector('.alert-error').style.display = 'none';
+                input.classList.remove('active');
+            });
+
           if (input.value.trim() === '') {
             // console.log(`${input.id} está vazio`);
             customInput.querySelector('.icon-error').style.display = 'block';
@@ -22,12 +28,14 @@ submit.addEventListener('click', (e) => {
           } else{
             customInput.querySelector('.icon-error').style.display = 'none';
             customInput.querySelector('.alert-error').style.display = 'none';
+            customInput.querySelector('input').classList.remove('active')
             if (input.id === 'email') {
                 const emailValue = input.value;
                 let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
                     if(regex.test(emailValue)){
                         customInput.querySelector('.icon-error').style.display = 'none';
                         customInput.querySelector('.alert-error').style.display = 'none';
+                        customInput.querySelector('input').classList.remove('active')
                         // console.log('email valido')
                     }else{
                         customInput.querySelector('.icon-error').style.display = 'block';
@@ -41,14 +49,14 @@ submit.addEventListener('click', (e) => {
     });
     
     if (valid) {
-        // alert('Registration successful!');
         function openModal() {
             var modal = document.querySelector(".modal");
             modal.style.display = "block";
             setTimeout(function() {
-                modal.style.display = "none"; // Fecha o modal após 2 segundos
-            }, 3000);
+                modal.style.display = "none";
+            }, 3500 );
         }
+        openModal();
 
         inputs.forEach(customInput => {
             let input = customInput.querySelector('input');
@@ -58,7 +66,6 @@ submit.addEventListener('click', (e) => {
         });
     }
 
-    openModal();
 })
 
 
