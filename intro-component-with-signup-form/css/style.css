@@ -27,7 +27,7 @@ body{
     max-width: 100%;
     height: auto;
     padding: 80px 0;
-    margin: auto;
+    margin: 4vh auto;
     background-image: url(/images/bg-intro-mobile.png);
     background-repeat: repeat-y;
     background-color: var(--red-color);
